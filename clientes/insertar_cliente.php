@@ -13,15 +13,13 @@ $estado = $_POST['status'];
 
 $conn = new Conexion();
 $conect = $conn->conectar();
-$sql="insert into CLIENT (name, addres, contact, email, phone, created_at, type_client_idtype, status_client_idstatus)
-     values ("."'$nombre',".
-            "'$direccion',".
-            "'$contacto',".
-            "'$email',".
-            "$telefono,".
-            "sysdate,".
-            "$tipo,".
-            "$estado".")";
+$sql="call pkg_crud_clientes.insert_cliente("."'$nombre',"
+    ."'$direccion',"
+    ."'$contacto',"
+    ."'$email',"
+    ."$telefono,"
+    ."$tipo,"
+    ."$estado".")";
 $query=$conect->prepare($sql);
 
 try{

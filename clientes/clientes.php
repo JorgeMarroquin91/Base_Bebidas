@@ -73,7 +73,7 @@
                     status=<?php echo $row['status']?>
                     ">
                 <input type="button" value="Actualizar" >
-                </a><a href="Eliminarclientes.php?
+                </a><a href="eliminar_cliente.php?
                     idclient=<?php echo $row['idclient']?>
                     ">
                 <input type="button" value="Eliminar" >
