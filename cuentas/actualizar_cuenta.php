@@ -1,22 +1,22 @@
 <?php
 require_once("../conexion.php");
-$idcliente = $_POST['idclient'];
+$idcuenta = $_POST['idaccount'];
 $nombre = $_POST['name'];
-$direccion = $_POST['addres'];
-$contacto = $_POST['contact'];
-$email = $_POST['email'];
-$telefono = $_POST['phone'];
+$codigo = $_POST['lookupcode'];
 $tipo = $_POST['type'];
 $estado = $_POST['status'];
 
+echo $idcuenta;
+echo $nombre;
+echo $codigo;
+echo $tipo;
+echo $estado;
+
 $conn = new Conexion();
 $conect = $conn->conectar();
-$sql="call pkg_crud_clientes.update_cliente("."'$idcliente',"
+$sql="call pkg_crud_cuentas.update_cuenta("."'$idcuenta',"
         ."'$nombre',"
-        ."'$direccion',"
-        ."'$contacto',"
-        ."'$email',"
-        ."$telefono," 
+        ."'$codigo',"
         ."$tipo,"
         ."$estado".")";
 $query=$conect->prepare($sql);
@@ -25,7 +25,7 @@ try{
     if($query->execute()){
         echo '<script type="text/javascript">
             alert("Datos Actualizados Correctamente");
-            window.location.href="clientes.php";
+            window.location.href="cuentas.php";
             </script>';
     }  
 

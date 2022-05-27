@@ -12,11 +12,11 @@
         <a href="./clientes/clientes.php">
             <input type="button" value="Clientes">
         </a><br><br>
-        <a href="clientes.php">
-            <input type="button" value="Clientes">
+        <a href="./cuentas/cuentas.php">
+            <input type="button" value="Cuentas">
         </a><br><br>
-        <a href="clientes.php">
-            <input type="button" value="Clientes">
+        <a href="./ordenes/ordenes.php">
+            <input type="button" value="Ordenes">
         </a><br><br>
         <a href="clientes.php">
             <input type="button" value="Clientes">
