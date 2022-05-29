@@ -1,18 +1,24 @@
 <?php
 require_once("../conexion.php");
 
-$idcliente = $_GET['idclient'];
+$tipo = $_POST['type'];
+$estado = $_POST['status'];
+
+
 
 $conn = new Conexion();
 $conect = $conn->conectar();
-$sql="call pkg_crud_clientes.delete_cliente("."$idcliente".")";
+$sql="call pkg_crud_cuentas.insertar_cuenta("."'$nombre',"
+    ."'$codigo',"
+    ."$tipo,"
+    ."$estado".")";
 $query=$conect->prepare($sql);
 
 try{
     if($query->execute()){
         echo '<script type="text/javascript">
-            alert("Elimando Correctamente");
-            window.location.href="http://localhost/Base_Bebidas/clientes/clientes.php";
+            alert("Datos Guardados Correctamente");
+            window.location.href="cuentas.php";
             </script>';
     }  
 

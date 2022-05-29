@@ -24,12 +24,15 @@
     </style>
 </head>
 <body>
-    <h2>Listado de Cuentas</h2>
+    <div>
+        <?php include_once '../index.php'; ?>
+    </div>
+    
     <form>
+    <h2>Listado de Cuentas</h2>
         <a href="nuevacuenta.php">
             <input type="button" value="Agregar Cuenta">
         </a><br><br>
-    </form>
     <table>
         <tr>
             <th>ID CUENTA</th>
@@ -71,5 +74,6 @@
             }
         ?>
     </table>
+</form>
 </body>
 </html>

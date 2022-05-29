@@ -7,8 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Actualizar Cuenta</h2>
-    <form action="actualizar_cuenta.php" method="post">
+    <div>
+        <?php include_once '../index.php'; ?>
+    </div>
+    
+    <form action="actualizar_cuenta.php" method="post" style="display: flex; flex-direction: column;
+                                                            justify-content: center; align-items: center;">
+    <h2>Actualizar Cuenta</h2><br>
 <?php
     $idcuenta = $_GET['idaccoun'];
     $nombre = $_GET['name'];

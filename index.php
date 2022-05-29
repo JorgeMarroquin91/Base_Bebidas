@@ -5,22 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+		<style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin-bottom: 50px;
+				width:100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#AAB7B8;
+				color:black;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#D5DBDB;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			
+		</style>
 </head>
 <body>
-    <h1>Sistema de Distribucion</h1><br>
-    <form>
-        <a href="./clientes/clientes.php">
-            <input type="button" value="Clientes">
-        </a><br><br>
-        <a href="./cuentas/cuentas.php">
-            <input type="button" value="Cuentas">
-        </a><br><br>
-        <a href="./ordenes/ordenes.php">
-            <input type="button" value="Ordenes">
-        </a><br><br>
-        <a href="clientes.php">
-            <input type="button" value="Clientes">
-        </a><br>
-</form>
+    <h1 style="text-align: center">Sistema de Distribucion</h1><br>  
+    <div id="header">
+			<ul class="nav">
+				<li><a href="http://localhost/Base_Bebidas/clientes/clientes.php">CLIENTES</a>
+					<ul>
+						<li><a href="http://localhost/Base_Bebidas/clientes/nuevocliente.php">Agregar Cliente</a></li>
+						<li><a href="">Tipo cliente</a></li>
+						<li><a href="">Estado cliente</a></li>
+					</ul>
+				</li>
+				<li><a href="http://localhost/Base_Bebidas/cuentas/cuentas.php">CUENTAS</a>
+					<ul>
+						<li><a href="http://localhost/Base_Bebidas/cuentas/nuevacuenta.php">Agregar cuenta</a></li>
+						<li><a href="">Tipo cuenta</a></li>
+						<li><a href="">Estado cuenta</a></li>
+					</ul>
+				</li>
+                <li><a href="http://localhost/Base_Bebidas/ordenes/ordenes.php">ORDENES</a>
+					<ul>
+						<li><a href="http://localhost/Base_Bebidas/ordenes/nuevaorden.php">Agregar orden</a></li>
+						<li><a href="">Tipo orden</a></li>
+						<li><a href="">Estado orden</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+        
 </body>
 </html>

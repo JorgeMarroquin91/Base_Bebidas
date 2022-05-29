@@ -7,8 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Actualizar Cliente</h2>
-    <form action="actualizar_cliente.php" method="post">
+    <div>
+        <?php include_once '../index.php'; ?>
+    </div>
+
+    <form action="actualizar_cliente.php" method="post" style="display: flex; flex-direction: column;
+                                                            justify-content: center; align-items: center;">
+    <h2>Actualizar Cliente</h2><br>
 <?php
     $idcliente = $_GET['idclient'];
     $nombre = $_GET['name'];

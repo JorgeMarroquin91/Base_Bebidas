@@ -11,26 +11,10 @@
         <?php include_once '../index.php'; ?>
     </div>
     
-    <form action="insertar_cuenta.php" method="post" style="display: flex; flex-direction: column;
+    <form action="insertar_orden.php" method="post" style="display: flex; flex-direction: column;
                                                             justify-content: center; align-items: center;">
-        <h2>Crear Nueva Cuenta</h2><br>
+        <h2>Crear Nueva Orden</h2><br>
         <table>
-            <tr>
-                <td>
-                    <label>Nombre: </label><br><br>
-                </td>
-                <td>
-                    <input type="text" name="name" id=""><br><br>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Codigo: </label><br><br>
-                </td>
-                <td>
-                    <input type="text" name="lookupcode" id=""><br><br>
-                </td>
-            </tr>
             <tr>
                 <td>
                     <label>Tipo</label><br><br>

@@ -24,12 +24,16 @@
     </style>
 </head>
 <body>
-    <h2>Listado de Ordenes Activas</h2>
+    <div>
+        <?php include_once '../index.php'; ?>
+    </div>
+    
     <form>
+        <h2>Listado de Ordenes Activas</h2>
         <a href="nuevaorden.php">
             <input type="button" value="Agregar Orden">
         </a><br><br>
-    </form>
+    
     <table>
         <tr>
             <th>ID ORDEN</th>
@@ -74,5 +78,6 @@
             }
         ?>
     </table>
+    </form>
 </body>
 </html>

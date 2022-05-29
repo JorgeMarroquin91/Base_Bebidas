@@ -24,12 +24,15 @@
     </style>
 </head>
 <body>
-    <h2>Listado de Clientes</h2>
-    <form>
+    <div>
+        <?php include_once '../index.php'; ?>
+    </div>
+
+    <form><h2>Listado de Clientes</h2>
         <a href="nuevocliente.php">
             <input type="button" value="Agregar Cliente">
         </a><br><br>
-    </form>
+    
     <table>
         <tr>
             <th>Hoy</th>
@@ -73,7 +76,7 @@
                     status=<?php echo $row['status']?>
                     ">
                 <input type="button" value="Actualizar" >
-                </a><a href="eliminar_cliente.php?
+                </a><a href="http://localhost/Base_Bebidas/clientes/eliminar_cliente.php?
                     idclient=<?php echo $row['idclient']?>
                     ">
                 <input type="button" value="Eliminar" >
@@ -83,5 +86,6 @@
             }
         ?>
     </table>
+    </form>
 </body>
 </html>

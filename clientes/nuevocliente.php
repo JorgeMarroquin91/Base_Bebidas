@@ -7,8 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Crear Nuevo Cliente</h2>
-    <form action="insertar_cliente.php" method="post">
+    <div>
+        <?php include_once '../index.php'; ?>
+    </div>
+    
+    
+    <form action="insertar_cliente.php" method="post" style="display: flex; flex-direction: column;
+                                                            justify-content: center; align-items: center;">
+        <h2>Crear Nuevo Cliente</h2><br>
         <table>
             <tr>
                 <td>
