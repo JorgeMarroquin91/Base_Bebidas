@@ -80,6 +80,7 @@
 						<li><a href="http://localhost/Base_Bebidas/cuentas/nuevacuenta.php">Agregar cuenta</a></li>
 						<li><a href="">Tipo cuenta</a></li>
 						<li><a href="">Estado cuenta</a></li>
+						<li><a href="http://localhost/Base_Bebidas/cuentas/historial_cuenta.php">Historial Cuenta</a></li>
 					</ul>
 				</li>
                 <li><a href="http://localhost/Base_Bebidas/ordenes/ordenes.php">ORDENES</a>
@@ -87,6 +88,7 @@
 						<li><a href="http://localhost/Base_Bebidas/ordenes/nuevaorden.php">Agregar orden</a></li>
 						<li><a href="">Tipo orden</a></li>
 						<li><a href="">Estado orden</a></li>
+						<li><a href="http://localhost/Base_Bebidas/ordenes/historial_orden.php">Historial Orden</a></li>
 					</ul>
 				</li>
 				<li><a href="http://localhost/Base_Bebidas/licenseplate/licenseplate.php">LICENSEPLATE</a>
@@ -94,6 +96,7 @@
 						<li><a href="http://localhost/Base_Bebidas/licenseplate/nuevolicense.php">Agregar License</a></li>
 						<li><a href="">Tipo License</a></li>
 						<li><a href="">Estado License</a></li>
+						<li><a href="http://localhost/Base_Bebidas/licenseplate/historial_license.php">Historial License</a></li>
 					</ul>
 				</li>
 			</ul>

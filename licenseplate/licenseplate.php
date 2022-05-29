@@ -67,14 +67,10 @@
             <td><?php echo $row['product_number']?></td>
             <td><a href="http://localhost/Base_Bebidas/licenseplate/editarlicense.php?
                     idlicense=<?php echo $row['id']?>&
-                    name=<?php echo $row['owneruser']?>&
                     codigo=<?php echo $row['lookupcode']?>&
-                    fecha_create=<?php echo $row['created_at']?>&
-                    fecha_update=<?php echo $row['updated_at']?>&
                     tipo=<?php echo $row['type']?>&
                     estado=<?php echo $row['name']?>&
-                    codigo=<?php echo $row['product_name']?>&
-                    p_cantidad=<?php echo $row['product_number']?>
+                    codigo_producto=<?php echo $row['product_name']?>
                     ">
                 <input type="button" value="Actualizar" >
                 </a><a href="http://localhost/Base_Bebidas/licenseplate/eliminar_license.php?

@@ -30,7 +30,7 @@
 
     
     <form>
-    <h2>Historial Tabla Clientes</h2><br><br>
+    <h2>Historial Tabla Cuentas</h2><br><br>
     <table>
         <tr>
             <th>ID TIPO</th>
@@ -46,7 +46,7 @@
             $conn = new Conexion();
             $conect = $conn->conectar();
             
-            $sql="select * from view_historial_cliente";
+            $sql="select * from view_historial_cuenta";
             foreach ($conect->query($sql) as $row){
         ?>
         <tr>
