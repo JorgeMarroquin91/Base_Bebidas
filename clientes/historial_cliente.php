@@ -44,7 +44,7 @@
             <th>DATOS MODIFICADOS</th>
         </tr>
         <?php
-            require_once("conexion.php");
+            require_once("../conexion.php");
 
             $conn = new Conexion();
             $conect = $conn->conectar();

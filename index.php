@@ -72,6 +72,7 @@
 						<li><a href="http://localhost/Base_Bebidas/clientes/nuevocliente.php">Agregar Cliente</a></li>
 						<li><a href="">Tipo cliente</a></li>
 						<li><a href="">Estado cliente</a></li>
+						<li><a href="http://localhost/Base_Bebidas/clientes/historial_cliente.php">Historial Cliente</a></li>
 					</ul>
 				</li>
 				<li><a href="http://localhost/Base_Bebidas/cuentas/cuentas.php">CUENTAS</a>
