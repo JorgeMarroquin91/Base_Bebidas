@@ -17,6 +17,39 @@
         <table>
             <tr>
                 <td>
+                    <label>Cantida: </label><br><br>
+                </td>
+                <td>
+                    <input type="text" name="product_number" ><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Producto: </label><br><br>
+                </td>
+                <td>
+                <?php
+                require_once("../conexion.php");
+
+                $conn = new Conexion();
+                $conect = $conn->conectar();
+
+                $sql="select * from view_productos";
+                ?>
+                <select name="product_code" >
+                <?php
+                foreach ($conect->query($sql) as $row){
+                ?>
+                    <option value="<?php echo $row['id_product'] ?>"
+                    ><?php echo $row['product_name']?></option>
+                <?php
+                }
+                ?>
+                </select><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <label>Tipo</label><br><br>
                 </td>
                 <td>
@@ -36,7 +69,7 @@
                 <?php
                 }
                 ?>
-                </select>
+                </select><br><br>
                 </td>
             </tr>
             <tr>

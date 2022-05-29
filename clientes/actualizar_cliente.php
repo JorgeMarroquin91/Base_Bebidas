@@ -9,6 +9,15 @@ $telefono = $_POST['phone'];
 $tipo = $_POST['type'];
 $estado = $_POST['status'];
 
+echo $idcliente;
+echo $nombre;
+echo $direccion;
+echo $contacto;
+echo $email;
+echo $telefono;
+echo $tipo;
+echo $estado;
+
 $conn = new Conexion();
 $conect = $conn->conectar();
 $sql="call pkg_crud_clientes.update_cliente("."'$idcliente',"
@@ -20,12 +29,12 @@ $sql="call pkg_crud_clientes.update_cliente("."'$idcliente',"
         ."$tipo,"
         ."$estado".")";
 $query=$conect->prepare($sql);
-
+$query->execute();
 try{
     if($query->execute()){
         echo '<script type="text/javascript">
             alert("Datos Actualizados Correctamente");
-            window.location.href="clientes.php";
+            window.location.href="http://localhost/Base_Bebidas/clientes/clientes.php";
             </script>';
     }  
 

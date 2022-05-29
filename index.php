@@ -89,6 +89,13 @@
 						<li><a href="">Estado orden</a></li>
 					</ul>
 				</li>
+				<li><a href="http://localhost/Base_Bebidas/licenseplate/licenseplate.php">LICENSEPLATE</a>
+					<ul>
+						<li><a href="http://localhost/Base_Bebidas/licenseplate/nuevolicense.php">Agregar License</a></li>
+						<li><a href="">Tipo License</a></li>
+						<li><a href="">Estado License</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</body>

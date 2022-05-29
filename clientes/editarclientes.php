@@ -11,7 +11,7 @@
         <?php include_once '../index.php'; ?>
     </div>
 
-    <form action="actualizar_cliente.php" method="post" style="display: flex; flex-direction: column;
+    <form action="http://localhost/Base_Bebidas/clientes/actualizar_cliente.php" method="post" style="display: flex; flex-direction: column;
                                                             justify-content: center; align-items: center;">
     <h2>Actualizar Cliente</h2><br>
 <?php

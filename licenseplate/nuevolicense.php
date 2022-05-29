@@ -11,39 +11,40 @@
         <?php include_once '../index.php'; ?>
     </div>
     
-    <form action="actualizar_cuenta.php" method="post" style="display: flex; flex-direction: column;
+    <form action="http://localhost/Base_Bebidas/licenseplate/insertar_license.php" method="post" style="display: flex; flex-direction: column;
                                                             justify-content: center; align-items: center;">
-    <h2>Actualizar Cuenta</h2><br>
-<?php
-    $idcuenta = $_GET['idaccoun'];
-    $nombre = $_GET['name'];
-    $codigo = $_GET['codigo'];
-    $tipo = $_GET['tipo'];
-    $estado = $_GET['estado'];
-?>
+        <h2>Crear Nueva LicensePlate</h2><br>
         <table>
-            <tr>
-                <td>
-                    <label>ID Cuenta: </label><br><br>
-                </td>
-                <td>
-                    <input type="text" name="idaccount" value="<?php echo $idcuenta ?>" READONLY><br><br>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Nombre: </label><br><br>
-                </td>
-                <td>
-                    <input type="text" name="name" value="<?php echo $nombre ?>"><br><br>
-                </td>
-            </tr>
             <tr>
                 <td>
                     <label>Codigo: </label><br><br>
                 </td>
                 <td>
-                    <input type="text" name="lookupcode" value="<?php echo $codigo ?>"><br><br>
+                    <input type="text" name="lookupcode" id=""><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Orden</label><br><br>
+                </td>
+                <td>
+                <?php
+                require_once("../conexion.php");
+
+                $conn = new Conexion();
+                $conect = $conn->conectar();
+
+                $sql="select * from view_ordenes_activas";
+                ?>
+                <select name="typeorden">
+                <?php
+                foreach ($conect->query($sql) as $row){
+                ?>
+                    <option value="<?php echo $row['idorder'] ?>"><?php echo $row['product_name'].' Cant: '.$row['product_number']  ?></option>
+                <?php
+                }
+                ?>
+                </select>
                 </td>
             </tr>
             <tr>
@@ -57,15 +58,13 @@
                 $conn = new Conexion();
                 $conect = $conn->conectar();
 
-                $sql="select * from ACCOURNTTYPE";
+                $sql="select * from LICENSEPLATECONTENST";
                 ?>
                 <select name="type">
                 <?php
                 foreach ($conect->query($sql) as $row){
                 ?>
-                    <option value="<?php echo $row['idtype'] ?>"
-                        <?php if($row['name'] != $tipo) echo 'disabled' ?>
-                    ><?php echo $row['name']?></option>
+                    <option value="<?php echo $row['idcontenst'] ?>"><?php echo $row['type']?></option>
                 <?php
                 }
                 ?>
@@ -83,15 +82,13 @@
                 $conn = new Conexion();
                 $conect = $conn->conectar();
 
-                $sql="select * from ACCOUNTTYPE";
+                $sql="select * from CONTENSTATUS";
                 ?>
-                <select name="status" >
+                <select name="status">
                 <?php
                 foreach ($conect->query($sql) as $row){
                 ?>
-                    <option value="<?php echo $row['idstatus'] ?>"
-                    <?php if($row['name'] != $estado)echo 'disabled'?>
-                    ><?php echo $row['name']?></option>
+                    <option value="<?php echo $row['idstatus'] ?>"><?php echo $row['name']?></option>
                 <?php
                 }
                 ?>
@@ -102,7 +99,7 @@
             <tr>
                 <td></td>
                 <td>
-                    <input type="submit" value="Actualizar" >
+                    <input type="submit" value="Insertar">
                 </td>
             </tr>
         </table>

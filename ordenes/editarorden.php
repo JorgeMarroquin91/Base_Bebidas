@@ -11,16 +11,16 @@
         <?php include_once '../index.php'; ?>
     </div>
     
-    <form action="actualizar_cuenta.php" method="post" style="display: flex; flex-direction: column;
+    <form action="http://localhost/Base_Bebidas/ordenes/actualizar_orden.php" method="post" style="display: flex; flex-direction: column;
                                                             justify-content: center; align-items: center;">
     
     <h2>Actualizar Cuenta</h2><br>
 <?php
     $idorden = $_GET['idorden'];
-    $fecha_create = $_GET['fecha_create'];
-    $fecha_update = $_GET['fecha_update'];
     $tipo = $_GET['tipo'];
     $estado = $_GET['estado'];
+    $codigo = $_GET['codigo'];
+    $cantidad = $_GET['p_cantidad'];
 ?>
         <table>
             <tr>
@@ -28,23 +28,15 @@
                     <label>ID Orden: </label><br><br>
                 </td>
                 <td>
-                    <input type="text" name="idorder" value="<?php echo $idorden ?>" READONLY><br><br>
+                    <input type="text" name="idorden" value="<?php echo $idorden ?>" READONLY><br><br>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label>Fecha de Creacion: </label><br><br>
+                    <label>Cantidad: </label><br><br>
                 </td>
                 <td>
-                    <input type="text" name="created_at" value="<?php echo $fecha_create ?>" READONLY><br><br>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label >Fecha de Modificacion: </label><br><br>
-                </td>
-                <td>
-                    <input type="text" name="update_at" value="<?php echo $fecha_update ?>" READONLY><br><br>
+                    <input type="text" name="cantidad" value="<?php echo $cantidad ?>" ><br><br>
                 </td>
             </tr>
             <tr>
@@ -70,12 +62,12 @@
                 <?php
                 }
                 ?>
-                </select>
+                </select><br><br>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label>Estado: </label>
+                    <label>Estado: </label><br><br>
                 </td>
                 <td>
                 <?php
@@ -93,6 +85,32 @@
                     <option value="<?php echo $row['idstatus'] ?>"
                     <?php if($row['status'] != $estado)echo 'disabled'?>
                     ><?php echo $row['status']?></option>
+                <?php
+                }
+                ?>
+                </select><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Producto: </label>
+                </td>
+                <td>
+                <?php
+                require_once("../conexion.php");
+
+                $conn = new Conexion();
+                $conect = $conn->conectar();
+
+                $sql="select * from view_productos";
+                ?>
+                <select name="product_code" >
+                <?php
+                foreach ($conect->query($sql) as $row){
+                ?>
+                    <option value="<?php echo $row['id_product'] ?>"
+                    <?php if($row['product_code'] == $codigo)echo 'selected'?>
+                    ><?php echo $row['product_name']?></option>
                 <?php
                 }
                 ?>
