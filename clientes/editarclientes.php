@@ -84,7 +84,7 @@
                 $conn = new Conexion();
                 $conect = $conn->conectar();
 
-                $sql="select * from TYPE_CLIENT";
+                $sql="select * from view_tipo_cliente";
                 ?>
                 <select name="type">
                 <?php
@@ -110,7 +110,7 @@
                 $conn = new Conexion();
                 $conect = $conn->conectar();
 
-                $sql="select * from STATUS_CLIENT";
+                $sql="select * from view_estado_cliente";
                 ?>
                 <select name="status" >
                 <?php

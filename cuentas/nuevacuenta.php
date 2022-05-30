@@ -42,7 +42,7 @@
                 $conn = new Conexion();
                 $conect = $conn->conectar();
 
-                $sql="select * from ACCOURNTTYPE";
+                $sql="select * from view_tipo_cuenta";
                 ?>
                 <select name="type">
                 <?php
@@ -66,7 +66,7 @@
                 $conn = new Conexion();
                 $conect = $conn->conectar();
 
-                $sql="select * from ACCOUNTTYPE";
+                $sql="select * from view_estado_cuenta";
                 ?>
                 <select name="status">
                 <?php

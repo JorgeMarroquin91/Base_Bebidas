@@ -70,32 +70,32 @@
 				<li><a href="http://localhost/Base_Bebidas/clientes/clientes.php">CLIENTES</a>
 					<ul>
 						<li><a href="http://localhost/Base_Bebidas/clientes/nuevocliente.php">Agregar Cliente</a></li>
-						<li><a href="">Tipo cliente</a></li>
-						<li><a href="">Estado cliente</a></li>
+						<li><a href="http://localhost/Base_Bebidas/clientes/tipocliente.php">Tipo cliente</a></li>
+						<li><a href="http://localhost/Base_Bebidas/clientes/estadocliente.php">Estado cliente</a></li>
 						<li><a href="http://localhost/Base_Bebidas/clientes/historial_cliente.php">Historial Cliente</a></li>
 					</ul>
 				</li>
 				<li><a href="http://localhost/Base_Bebidas/cuentas/cuentas.php">CUENTAS</a>
 					<ul>
 						<li><a href="http://localhost/Base_Bebidas/cuentas/nuevacuenta.php">Agregar cuenta</a></li>
-						<li><a href="">Tipo cuenta</a></li>
-						<li><a href="">Estado cuenta</a></li>
+						<li><a href="http://localhost/Base_Bebidas/cuentas/tipocuenta.php">Tipo cuenta</a></li>
+						<li><a href="http://localhost/Base_Bebidas/cuentas/estadocuenta.php">Estado cuenta</a></li>
 						<li><a href="http://localhost/Base_Bebidas/cuentas/historial_cuenta.php">Historial Cuenta</a></li>
 					</ul>
 				</li>
                 <li><a href="http://localhost/Base_Bebidas/ordenes/ordenes.php">ORDENES</a>
 					<ul>
 						<li><a href="http://localhost/Base_Bebidas/ordenes/nuevaorden.php">Agregar orden</a></li>
-						<li><a href="">Tipo orden</a></li>
-						<li><a href="">Estado orden</a></li>
+						<li><a href="http://localhost/Base_Bebidas/ordenes/tipoorden.php">Tipo orden</a></li>
+						<li><a href="http://localhost/Base_Bebidas/ordenes/estadoorden.php">Estado orden</a></li>
 						<li><a href="http://localhost/Base_Bebidas/ordenes/historial_orden.php">Historial Orden</a></li>
 					</ul>
 				</li>
 				<li><a href="http://localhost/Base_Bebidas/licenseplate/licenseplate.php">LICENSEPLATE</a>
 					<ul>
 						<li><a href="http://localhost/Base_Bebidas/licenseplate/nuevolicense.php">Agregar License</a></li>
-						<li><a href="">Tipo License</a></li>
-						<li><a href="">Estado License</a></li>
+						<li><a href="http://localhost/Base_Bebidas/licenseplate/tipolicense.php">Tipo License</a></li>
+						<li><a href="http://localhost/Base_Bebidas/licenseplate/estadolicense.php">Estado License</a></li>
 						<li><a href="http://localhost/Base_Bebidas/licenseplate/historial_license.php">Historial License</a></li>
 					</ul>
 				</li>

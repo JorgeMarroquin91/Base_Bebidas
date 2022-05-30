@@ -59,13 +59,13 @@
                 $conn = new Conexion();
                 $conect = $conn->conectar();
 
-                $sql="select * from ACCOURNTTYPE";
+                $sql="select * from view_tipo_orden";
                 ?>
                 <select name="type">
                 <?php
                 foreach ($conect->query($sql) as $row){
                 ?>
-                    <option value="<?php echo $row['idtype'] ?>"><?php echo $row['name']?></option>
+                    <option value="<?php echo $row['idtype'] ?>"><?php echo $row['status']?></option>
                 <?php
                 }
                 ?>
@@ -83,13 +83,13 @@
                 $conn = new Conexion();
                 $conect = $conn->conectar();
 
-                $sql="select * from ACCOUNTTYPE";
+                $sql="select * from view_estado_orden";
                 ?>
                 <select name="status">
                 <?php
                 foreach ($conect->query($sql) as $row){
                 ?>
-                    <option value="<?php echo $row['idstatus'] ?>"><?php echo $row['name']?></option>
+                    <option value="<?php echo $row['idstatus'] ?>"><?php echo $row['type']?></option>
                 <?php
                 }
                 ?>
