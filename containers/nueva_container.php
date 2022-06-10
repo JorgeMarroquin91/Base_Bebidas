@@ -17,39 +17,6 @@
         <table>
             <tr>
                 <td>
-                    <label>Cantida: </label><br><br>
-                </td>
-                <td>
-                    <input type="text" name="product_number" ><br><br>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Producto: </label><br><br>
-                </td>
-                <td>
-                <?php
-                require_once("../conexion.php");
-
-                $conn = new Conexion();
-                $conect = $conn->conectar();
-
-                $sql="select * from view_productos";
-                ?>
-                <select name="product_code" >
-                <?php
-                foreach ($conect->query($sql) as $row){
-                ?>
-                    <option value="<?php echo $row['id_product'] ?>"
-                    ><?php echo $row['product_name']?></option>
-                <?php
-                }
-                ?>
-                </select><br><br>
-                </td>
-            </tr>
-            <tr>
-                <td>
                     <label>Tipo</label><br><br>
                 </td>
                 <td>
@@ -59,17 +26,17 @@
                 $conn = new Conexion();
                 $conect = $conn->conectar();
 
-                $sql="select * from view_tipo_orden";
+                $sql="select * from ACCOURNTTYPE";
                 ?>
                 <select name="type">
                 <?php
                 foreach ($conect->query($sql) as $row){
                 ?>
-                    <option value="<?php echo $row['idtype'] ?>"><?php echo $row['type']?></option>
+                    <option value="<?php echo $row['idtype'] ?>"><?php echo $row['name']?></option>
                 <?php
                 }
                 ?>
-                </select><br><br>
+                </select>
                 </td>
             </tr>
             <tr>
@@ -83,13 +50,13 @@
                 $conn = new Conexion();
                 $conect = $conn->conectar();
 
-                $sql="select * from view_estado_orden";
+                $sql="select * from ACCOUNTTYPE";
                 ?>
                 <select name="status">
                 <?php
                 foreach ($conect->query($sql) as $row){
                 ?>
-                    <option value="<?php echo $row['idstatus'] ?>"><?php echo $row['status']?></option>
+                    <option value="<?php echo $row['idstatus'] ?>"><?php echo $row['name']?></option>
                 <?php
                 }
                 ?>

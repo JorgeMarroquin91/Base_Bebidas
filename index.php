@@ -99,6 +99,22 @@
 						<li><a href="http://localhost/Base_Bebidas/licenseplate/historial_license.php">Historial License</a></li>
 					</ul>
 				</li>
+				<li><a href="http://localhost/Base_Bebidas/usuarios/usuario.php">USUARIOS</a>
+					<ul>
+					    <li><a href="http://localhost/Base_Bebidas/usuarios/usuario.php">Reporte usuarios</a></li>
+						<li><a href="http://localhost/Base_Bebidas/usuarios/nuevo_usuario.php">Agregar usuario</a></li>
+						<li><a href="http://localhost/Base_Bebidas/usuarios/vendedores_usuario.php">Listado Vendedores</a></li>
+						<li><a href="http://localhost/Base_Bebidas/usuarios/historial_usuario.php">Log usuarios</a></li>
+					</ul>
+				</li>
+				<li><a href="http://localhost/Base_Bebidas/containers/container.php">CONTENEDORES</a>
+					<ul>
+						<li><a href="http://localhost/Base_Bebidas/containers/container.php">Reporte detallado contenedores</a></li>
+						<li><a href="http://localhost/Base_Bebidas/containers/nuevo_containers.php">Agregar contenedor</a></li>
+						<li><a href="http://localhost/Base_Bebidas/containers/c_bodega.php">Contenedores en Bodega</a></li>
+						<li><a href="http://localhost/Base_Bebidas/containers/warehouse.php">warehouse</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</body>
